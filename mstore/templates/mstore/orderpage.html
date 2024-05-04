@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+
+        body{
+            margin-top: 15%;
+            background-color:skyblue;
+            
+        }
+        
+        form {
+            border: 1px solid slategray;
+            width: 300px;
+            margin: 50px auto;
+            padding: 50px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+        }   
+        
+        button{
+        
+            width: 100%;
+            height: 10% ;
+            background-color: blue;
+            border-radius: 5px;
+            color: white;
+        }
+        
+        
+        </style>
+    
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">order</button>
+    </form>
+</body>
+</html>

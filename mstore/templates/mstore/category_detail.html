@@ -1,0 +1,38 @@
+{% extends 'mstore/base.html' %}
+{% load static %}
+{% block title %}
+Mstore Products
+{% endblock title %}
+
+{% block content %}
+
+<div class="container">
+    <div class="h4 pb-2 mb-4 text-success text-center border-bottom border-success my-3">{{name.name}}</div>
+
+    <div class="row">
+        {% for i in data %}
+        <div class="col-md-3 mb-4">
+            <a href="{% url 'p_det' i.id %}">
+                <div class="card">
+                    <img src="{{ i.product_image.url }}" class="card-img-top" alt="..." height="300px" width="400px">
+                    <div class="card-body text-center">
+                       
+                        <p class="card-text">{{i.name}}</p>
+            </a>
+            <div class="card-body">
+                <p><span class="float-start">Rs.<s>{{i.original_price}}</s>
+                        {{i.selling_price}}</span></p>
+            </div>
+
+
+        </div>
+    </div>
+
+</div>
+{% endfor %}
+</div>
+</div>
+
+
+
+{% endblock %}
